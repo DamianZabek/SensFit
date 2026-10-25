@@ -1,0 +1,20 @@
+name = "sensfit-dostep"
+main = "src/index.js"
+compatibility_date = "2025-09-01"
+
+[vars]
+DISCORD_CLIENT_ID = "ID"
+GUILD_ID = "ID"     # serwer Discord SensFit
+ROLE_ID = "ID"      # rola testera
+WAZNOSC_GODZ = "24"                  # ile godzin bilet działa bez internetu
+MAX_KOMPUTEROW = "1"                 # na ilu komputerach jedno konto Discord
+
+# Magazyn kont (tokeny Discord + lista komputerów). ID dostaniesz z:
+#   npx wrangler kv namespace create KONTA
+[[kv_namespaces]]
+binding = "KONTA"
+id = "ID"   # sensfit-konta
+
+# Sekrety (NIE wpisuj ich tutaj), ustawiasz poleceniami:
+#   npx wrangler secret put DISCORD_CLIENT_SECRET
+#   npx wrangler secret put KLUCZ_PRYWATNY      (linia "KLUCZ_PRYWATNY" z klucze.py)
